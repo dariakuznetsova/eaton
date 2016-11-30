@@ -1,0 +1,142 @@
+extends ../main.jade
+
+block title
+	title Каталог
+
+block header
+	include ../blocks/_header__manufact
+
+block content
+	main.main
+		aside.aside.aside__products.aside__products_modified.aside__manufacturer.j-aside-products
+			.header-sales-office
+				a(href='contact.html')
+					span Contact us
+						+icon("envelope",30,27)
+			.search-block.search-block__manufacturer
+				.search-input-wrapper
+					input(type='text' placeholder='Quick finder')
+					img(src='images/loupe.svg')
+			.alphabet-filter
+				.title Filter by
+				ul
+					- var letters = ['A','B','C','D','E','F','G','H','I','J','K','L','M', 'N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
+					for item in letters
+						li.alphabet-filter__item
+							a(href='javascript:;')= item
+
+
+			
+		.main-content.main-content__manufacturer.main-content__products.j-main-products
+			ul.main-menu
+				li
+					a(href='#').help-section__link.app-link Application
+						img(src='images/app.svg' alt='icon')
+				li
+					a(href='catalogue.html') Products
+				li.active
+					a(href='#') Manufacturer
+				li
+					a(href='features2.html') Legacy
+				li
+					a(href='choose.html').compare__link Compare
+						+icon("graphic",25,23)
+
+			.manufacturer-block
+				.manufacturer__text
+					p.j-text-info With this option, you can select a meter from from a list of available metering products. Then, the Meter Wizard compares the selected manufacturer’s product and recommends three Eaton metering products based on the available features and functions of each. From there, you can view highlighted meter features, plus side-by-side feature comparisons.
+					.fade-effect
+					.more-text-link
+						a(href='javascript:;').j-more-text-link
+							+icon("arrow",30,20)
+
+				.manufacturer-list-block.grid
+
+					ul.manufacturer-list.grid-item
+						.manufacturer-list__title Allen-Bradley
+						li Power Monitor 5000 M5
+						li Power Monitor M6
+						li Power Monitor II
+
+					ul.manufacturer-list.grid-item
+						.manufacturer-list__title Classic Cutler Hummer
+						li IQ 210 / 220 / 230
+						li IQ 310 / 320 / 330
+						li IQ DP - 4000
+						li IQ DP - 4100
+						li IQA - 6400
+						li IQF - 6600
+						li IQ MESII
+
+					ul.manufacturer-list.grid-item
+						.manufacturer-list__title  Electro industries
+						li Shark 100-V1
+						li Shark 100-V2
+						li Shark 100-V3
+						li Shark 100B
+						li Shark 200-V1
+						li Shark 200-V2
+						li Shark 200-V3
+						li Shark 200-V4
+						li Nexus 1251-V1
+						li Nexus 1252-V2
+					
+					ul.manufacturer-list.grid-item
+						.manufacturer-list__title E - mon  D - mon
+						li Class 2000
+						li Class 3000
+
+					ul.manufacturer-list.grid-item
+						.manufacturer-list__title GE
+						li PQM II (wo/I/Q)
+						li PQM II (w/I/Q)
+						li PQM-A II (w/I/Q)
+						li EPM 6000
+						li EPM 6000 (w/THD)
+						li EPM 9450
+						li EPM 9650
+
+					ul.manufacturer-list.grid-item
+						.manufacturer-list__title Schneider Electric - SqD/PML
+						li ION 6200
+						li ION 6200 - EP1
+						li ION 6200 - EP2
+						li ION 7300
+						li ION 7330
+						li ION 7350
+						li ION 7550
+						li ION 7650
+						li ION 8800 (Rack Mount)
+
+					ul.manufacturer-list.grid-item
+						.manufacturer-list__title Schneider Electric - Square D
+						li PM 710
+						li PM 750
+						li PM 820
+						li PM 850
+						li PM 870
+						li CM 3250
+						li CM 3350
+						li CM 4000
+						li CM 4250
+						li CM 4000T
+						li EM 4800
+
+					ul.manufacturer-list.grid-item
+						.manufacturer-list__title Schweitzer Engineering Labs
+						li SEL 734
+						li SEL 734P
+
+					ul.manufacturer-list.grid-item
+						.manufacturer-list__title Siemens 
+						li 9200
+						li 9300
+						li 9500
+						li 9600
+						li PAC 3200
+						li PAC 4200
+
+
+
+
+

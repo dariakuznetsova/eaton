@@ -1,0 +1,23 @@
+header.header#header
+	.header__first-line
+		.header-menu
+			ul.header-menu-list
+				.left-block.left-blok_home.left-block_width
+					li.header-menu__logo.header-menu__logo_modify
+						a(href='/').header-logo__link
+							img(src='images/logo2.png' alt='логотип')
+					li
+						a(href='/').header-menu__desc.header-menu__desc_hide Meter Selection Wizard
+		.header-sales-office
+			a(href='#')
+				span Contact us
+					+icon("envelope",30,27)
+		a(href='javascript:;').filter-mobile-link.filter-mobile-link_modify.j-filter-mobile-link
+					.open-filters.menu-products__open.j-filter-option
+						span Filter results
+							img(src='images/grid.svg')
+							+icon("filter",24,24)
+						+icon("loupe",24,24)
+					.close-filters.j-filter-option
+						span Close filters
+							+icon("close",20,20)

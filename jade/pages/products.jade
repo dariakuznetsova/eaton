@@ -1,0 +1,292 @@
+extends ../main.jade
+
+block title
+	title
+
+block header
+	include ../blocks/_header2
+
+block content
+	main.main.main_home
+		aside.aside.aside__products.aside__products_modified.j-aside-products
+			.header-sales-office
+				a(href='contact.html')
+					span Contact us
+						+icon("envelope",30,27)
+			.search-block
+				.search-input-wrapper
+					input(type='text' placeholder='Quick finder')
+					img(src='images/loupe.svg')
+
+			form.products-select-form
+				fieldset
+					label State
+					select(multiple="multiple").select__states
+				fieldset
+					label Utilities
+					select(multiple="multiple").products__select1
+						option Pennsylvania Power & Light
+						option Pennsylvania Power & Light
+						option Pennsylvania Power & Light
+						option Something else
+						option Something else
+						option Something else
+				fieldset
+					label Amperage Rating
+					select(multiple="multiple").products__select2
+						option ALL
+						option Option 1
+						option Option 2
+						option Option 3
+						option Option 4
+						option Option 5
+				fieldset
+					label Service Entry
+					select(multiple="multiple").products__select2
+						option ALL
+						option Option 1
+						option Option 2
+						option Option 3
+						option Option 4
+						option Option 5
+
+				button.products-form__button Start over
+			a(href='javascript:;').show-results-link Show 44 sockets
+
+
+		.main-content.main-content__products.j-main-products
+			.choose-city
+				p Are you located in 
+					span Pittsburgh?
+				.choose-city__links
+					a(href='#').choose-city__yes-link Yes
+					a(href='states.html').choose-city__no-link 
+						span No, change
+							+icon("pen",20,18)
+			ul.filter-block.products__filter-block
+				li
+					.products__filter_title Utilities
+					a(href='javascript:;').j-filter-link Select All
+				li
+					a(href='javascript:;').j-filter-link Allegheny Power
+				li
+					a(href='javascript:;').j-filter-link Duquesne Light
+				li
+					a(href='javascript:;').j-filter-link First Energy
+				li
+					a(href='javascript:;').j-filter-link GPU (JCP&L, Met Ed, Penelec)
+				li
+					a(href='javascript:;').j-filter-link Philadelphia Electric Company (PECO)
+
+			ul.products-menu-list
+				li.products-menu__item
+					.products-item__title
+						span.art UHT6R2392TTCH
+						span.right PA
+					a(href='detailed.html').products-item__img
+						img(src='images/prod1.jpg' alt='')
+					.products-item__links
+						a(href='detailed.html') Detailed view
+						a(href='detailed.html')
+							+icon("info1",22,22)
+					.products-item__power 100 A
+					a(href='detailed.html').products-item__filter-items
+						p Allegheny Power
+						p First Energy
+					.products-item__wrapper
+						.products-item__characteristics
+							p.jaws Jaws:
+								span 4
+							p.position Position:
+								span 6
+							p 14.13  х  62.94  х  5.38
+							p Overhead / Underground
+						a(href='how-to-buy.html').products-item__buy-link
+							span How to buy
+								+icon("basket-green",23,19)					
+
+				li.products-menu__item
+					.products-item__title
+						span.art UHT6R2392TTCH
+						span.right PA
+					a(href='detailed.html').products-item__img
+						img(src='images/prod2.jpg' alt='')
+					.products-item__links
+						a(href='detailed.html') Detailed view
+						a(href='detailed.html')
+							+icon("info1",22,22)
+					.products-item__power 100 A
+					a(href='detailed.html').products-item__filter-items
+						p Duquesne Light
+					.products-item__wrapper
+						.products-item__characteristics
+							p.jaws Jaws:
+								span 4
+							p.position Position:
+								span 6
+							p 14.13  х  62.94  х  5.38
+							p Overhead / Underground
+						a(href='how-to-buy.html').products-item__buy-link
+							span How to buy
+								+icon("basket-green",23,19)
+
+				li.products-menu__item
+					.products-item__title
+						span.art UHT6R2392TTCH
+						span.right PA
+					a(href='detailed.html').products-item__img
+						img(src='images/prod3.jpg' alt='')
+					.products-item__links
+						a(href='detailed.html') Detailed view
+						a(href='detailed.html')
+							+icon("info1",22,22)
+					.products-item__power 100 A
+					a(href='detailed.html').products-item__filter-items
+						p First Energy
+					.products-item__wrapper
+						.products-item__characteristics
+							p.jaws Jaws:
+								span 4
+							p.position Position:
+								span 6
+							p 14.13  х  62.94  х  5.38
+							p Overhead / Underground
+						a(href='how-to-buy.html').products-item__buy-link
+							span How to buy
+								+icon("basket-green",23,19)
+
+				li.products-menu__item
+					.products-item__title
+						span.art UHT6R2392TTCH
+						span.right PA
+					a(href='detailed.html').products-item__img
+						img(src='images/prod4.jpg' alt='')
+					.products-item__links
+						a(href='detailed.html') Detailed view
+						a(href='detailed.html')
+							+icon("info1",22,22)
+					.products-item__power 100 A
+					a(href='detailed.html').products-item__filter-items
+						p Allegheny Power
+						p First Energy
+					.products-item__wrapper
+						.products-item__characteristics
+							p.jaws Jaws:
+								span 4
+							p.position Position:
+								span 6
+							p 14.13  х  62.94  х  5.38
+							p Overhead / Underground
+						a(href='how-to-buy.html').products-item__buy-link
+							span How to buy
+								+icon("basket-green",23,19)
+
+				li.products-menu__item
+					.products-item__title
+						span.art UHT6R2392TTCH
+						span.right PA
+					a(href='detailed.html').products-item__img
+						img(src='images/prod3.jpg' alt='')
+					.products-item__links
+						a(href='detailed.html') Detailed view
+						a(href='detailed.html')
+							+icon("info1",22,22)
+					.products-item__power 100 A
+					a(href='detailed.html').products-item__filter-items
+						p Pennsylvania Power & Light
+					.products-item__wrapper
+						.products-item__characteristics
+							p.jaws Jaws:
+								span 4
+							p.position Position:
+								span 6
+							p 14.13  х  62.94  х  5.38
+							p Overhead / Underground
+						a(href='how-to-buy.html').products-item__buy-link
+							span How to buy
+								+icon("basket-green",23,19)
+
+				li.products-menu__item
+					.products-item__title
+						span.art UHT6R2392TTCH
+						span.right PA
+					a(href='detailed.html').products-item__img
+						img(src='images/prod6.jpg' alt='')
+					.products-item__links
+						a(href='detailed.html') Detailed view
+						a(href='detailed.html')
+							+icon("info1",22,22)
+					.products-item__power 100 A
+					a(href='detailed.html').products-item__filter-items
+						p Allegheny Power
+						p First Energy
+					.products-item__wrapper
+						.products-item__characteristics
+							p.jaws Jaws:
+								span 4
+							p.position Position:
+								span 6
+							p 14.13  х  62.94  х  5.38
+							p Overhead / Underground
+						a(href='how-to-buy.html').products-item__buy-link
+							span How to buy
+								+icon("basket-green",23,19)
+
+				li.products-menu__item
+					.products-item__title
+						span.art UHT6R2392TTCH
+						span.right PA
+					a(href='detailed.html').products-item__img
+						img(src='images/prod7.jpg' alt='')
+					.products-item__links
+						a(href='detailed.html') Detailed view
+						a(href='detailed.html')
+							+icon("info1",22,22)
+					.products-item__power 100 A
+					a(href='detailed.html').products-item__filter-items
+						p Allegheny Power
+						p First Energy
+					.products-item__wrapper
+						.products-item__characteristics
+							p.jaws Jaws:
+								span 4
+							p.position Position:
+								span 6
+							p 14.13  х  62.94  х  5.38
+							p Overhead / Underground
+						a(href='how-to-buy.html').products-item__buy-link
+							span How to buy
+								+icon("basket-green",23,19)
+
+				li.products-menu__item
+					.products-item__title
+						span.art UHT6R2392TTCH
+						span.right PA
+					a(href='detailed.html').products-item__img
+						img(src='images/prod1.jpg' alt='')
+					.products-item__links
+						a(href='detailed.html') Detailed view
+						a(href='detailed.html')
+							+icon("info1",22,22)
+					.products-item__power 100 A
+					a(href='detailed.html').products-item__filter-items
+						p Allegheny Power
+						p First Energy
+					.products-item__wrapper
+						.products-item__characteristics
+							p.jaws Jaws:
+								span 4
+							p.position Position:
+								span 6
+							p 14.13  х  62.94  х  5.38
+							p Overhead / Underground
+						a(href='how-to-buy.html').products-item__buy-link
+							span How to buy
+								+icon("basket-green",23,19)
+
+			.products__bottom
+				.products__bottom-text.
+					Eaton's line of single position, self-contained meter sockets house the utilities electrical watthour meters in residential and commercial buildings. Choose from the widest range of utility approved sockets in the industry, including 100-320A units and designs such as ringless, bypass, and more.
+				.products__bottom_additional Questions regarding product selection and technical support should be directed 
+				.products__bottom-tel 1-800-809-2772
+				a(href='mailto:pqsupport@eaton.com').products__bottom-email pqsupport@eaton.com

@@ -1,0 +1,76 @@
+extends ../main.jade
+
+block title
+	title
+
+block header
+	include ../blocks/_header3
+
+block content
+	main.main.main_home
+		.main-content.main-content__home.j-main-products
+			.home-wrapper.j-home-wrapper
+				h1.title_main Group 
+					span.h1-color Metering
+					br
+					span.h1-light and 
+					| Meter Breakers
+				.subtitle_main Eaton's Group Metering and Meter Breaker product lines meter electricity in single family homes, multi-tenant apartments or condominiums, or office complexes. Used with a load center or main breaker, they are also suitable for rural service entrance, mobile homes, and construction site temporary power.
+
+			ul.home-menu-list.j-home-list
+				li.home-menu__item.j-home-item
+					.blue-line
+					a(href='products.html').home-menu__link
+						.select-elem Select
+						.home-menu__title Single Meter Sockets
+						.home-menu__select Select
+							+icon("arrow3",30,20)
+						.home-menu__img
+							img(src='images/1.png' alt='socket')
+						.home-menu__text.j-home-text Eaton's line of single position, self-contained meter sockets house the utilities electrical watthour meters in residential and commercial buildings. Choose from the widest range of utility approved sockets in the industry, including 100 - 320 A units and designs such as ringless, bypass, and more.
+
+				li.home-menu__item.j-home-item
+					.blue-line
+					a(href='products.html').home-menu__link
+						.select-elem Select
+						.home-menu__title Group Metering
+						.home-menu__select Select
+							+icon("arrow3",30,20)
+						.home-menu__img
+							img(src='images/2.png' alt='meters')
+						.home-menu__text Eaton's Group Metering line offers All-In-One and Modular Metering.
+						ul.home-menu__characteristics
+							li Meter Packs
+							li Main Service Modules
+							li Main Circuit Breakers
+							li Surge Metering
+							li Residential Meter Stacks
+							li Commercial Stacks
+							li Phase balancing
+				li.home-menu__item.j-home-item
+					.blue-line
+					a(href='products.html').home-menu__link
+						.select-elem Select
+						.home-menu__title Meter Breakers
+						.home-menu__select Select
+							+icon("arrow3",30,20)
+						.home-menu__img
+							img(src='images/3.png' alt='meter breakers')
+						.home-menu__text Eaton's complete line of meter breakers are combination service entrance devices that meet virtually all electrical utility requirements.
+						ul.home-menu__characteristics
+							li House Panels
+							li Residential Meter
+
+		aside.aside.aside__products.aside_home
+			.header-sales-office
+				a(href='contact.html')
+					span Contact us
+						+icon("envelope",30,27)
+			a(href='states.html').aside-map
+				.aside-map__wrapper
+					img(src='images/usa-map.svg' id="svgmap" width="100%" height="auto")
+				.aside-map__text This tool will allow you to see whitch Eaton utility Metering products are applicable to your geographic region, and your utility.
+				.aside-map__pick
+						.wrap
+							span or
+							| Start by picking the state you are in

@@ -1,0 +1,30 @@
+header.header#header
+	.header__first-line
+		.header-menu.header-menu_modify
+			.header-menu-list
+				.left-block
+					.header-menu__logo.header-menu__logo_modify
+						a(href='/').header-logo__link
+							img(src='images/logo2.png' alt='логотип')
+					a(href='/').header-menu__desc Meter Socket Selection Tool
+				ul.right-block.header-catalogue-menu
+					li.header-catalogue-menu__item.active
+						a(href="#") Single Socket 
+					li.header-catalogue-menu__item
+						a(href="#") Group Metering 
+					li.header-catalogue-menu__item
+						a(href="#") Meter Breaker
+
+				.header-sales-office.contacts-us_mobile
+					a(href='contact.html')
+						span Contact us
+							+icon("envelope",30,27)
+
+				a(href='javascript:;').filter-mobile-link.j-filter-mobile-link
+					.open-filters.j-filter-option
+						span Filter results
+							+icon("filter",24,24)
+						+icon("loupe",24,24)
+					.close-filters.j-filter-option
+						span Close filters
+							+icon("close",20,20)

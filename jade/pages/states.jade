@@ -1,0 +1,41 @@
+extends ../main.jade
+
+block title
+	title
+
+block header
+	include ../blocks/_header6
+
+block content
+	main.main
+		.main-content.main-content__states
+			.bg-img
+				img(src='images/map.png' alt='map')
+			.title.z-index2 Start by picking the state you are in:
+			.subtitle.z-index2 This tool will allow you to see which Eaton Utility Metering products are applicable to your geographic region, and your utility.
+			.states-block.z-index2
+				.states-block__left
+					ul.states-list
+						- var states = ['Alabama','Arizona','Arkansas','Colorado','Connecticut','Delaware','District of Columbia','Florida','Illinois','Indiana'];
+						for item in states
+							li.states-list__item
+								a(href='javascript:;')= item
+					ul.states-list
+						- var states = ['Iowa','Kansas','Kentucky','Louisiana','Maryland','Massachusetts','Michigan','Minnesota','Mississippi','Missouri'];
+						for item in states
+							li.states-list__item
+								a(href='javascript:;')= item
+				.states-block__right
+					ul.states-list
+						- var states = ['Montana','Nebraska','New Jersey','New Mexico','New York','North Carolina','North Dakota','Ohio','Oklahoma','Pennsylvania'];
+						for item in states
+							li.states-list__item
+								a(href='javascript:;')= item
+					ul.states-list
+						- var states = ['Rhode Island','South Carolina','South Carolina','Tennessee','Texas','Vermont','Virginia','West Virginia','Wisconsin','Wyoming'];
+						for item in states
+							li.states-list__item
+								a(href='javascript:;')= item
+
+			a(href='#' onclick="javascript:history.back();").detailed-link
+				+icon("arrow3",65,45)

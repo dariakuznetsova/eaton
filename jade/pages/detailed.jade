@@ -1,0 +1,94 @@
+extends ../main-maps.jade
+
+block title
+	title
+
+block header
+	include ../blocks/_header7
+
+block content
+	main.main.detailed
+		.main-content
+			.main-content__left
+				.upper-block
+					a(href='#' onclick="javascript:history.back();")
+						+icon("arrow4",65,45)
+					span Pennsylvania
+				.img
+					img(src='images/socket1.jpg' alt='')
+				ul.socials-list
+					li
+						a(href='#')
+							img(src='images/fb.svg' alt='фэйсбук')
+							img(src='images/fb-blue.svg' alt='фэйсбук')
+					li
+						a(href='#')
+							img(src='images/mail.svg' alt='почта')
+							img(src='images/mail-blue.svg' alt='фэйсбук')
+					li
+						a(href='#')
+							img(src='images/more.svg' alt='другое')
+							img(src='images/more-blue.svg' alt='фэйсбук')
+
+			.main-content__right
+				ul.breadcrumbs
+					li Catalogue #
+					li.last UHT3R2332TCH
+
+				.property UTILITY
+				.value_blue 
+					a(href='#') FIRST ENERGY,
+					a(href='#') GPU (JCP&L, MET ED, PENELEC),
+					a(href='#') ALLEGHENY POWER
+				ul.properties-list
+					li
+						span.property Amp
+						span.value.color 200 A
+					li
+						span.property Jaws
+						span.value.bold 4
+					li
+						span.property Position
+						span.value.bold 3
+					li
+						span.property Service
+						span.value Overhead
+				ul.properties-list.properties-list__modify
+					li
+						span.property Bypass
+						span.value Horn
+					li
+						span.property Line
+						span.value #6-350 kcmil
+					li 
+						span.property Load
+						span.value #8-250 kcmil
+
+				.property Family
+				.value_blue Horizontal Design - Multi Position Ringless
+
+				ul.properties-list.properties-list__modify
+					li
+						span.property BHeight
+						span.value 14.13
+					li
+						span.property Width
+						span.value 32.94
+					li 
+						span.property Depth
+						span.value 5.38
+					li 
+						span.property Type
+						span.value 5x5 Hub Opening
+
+
+		aside.aside.j-map-aside
+			a(href='how-to-buy.html').aside__how-to-buy-link
+				+icon("arrow5",60,40)
+				.wrapper
+					.how-to-buy
+						p How to buy
+						span Find sales office
+					.contacts__map.map__modify#map2
+		a(href='how-to-buy.html').show-results-link.show-results-link__map.j-green-button How to buy
+

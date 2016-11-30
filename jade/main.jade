@@ -1,0 +1,41 @@
+include mixins
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		meta(name="viewport",content="width=device-width,initial-scale=1.0" class='viewport')
+		link(href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i|Roboto+Condensed:300,400,700" rel="stylesheet")
+		link(rel="stylesheet" type="text/css" href="css/main.css")
+		block title
+	body
+		include ../site/images/sprites/sprites.svg
+
+		block header
+
+		.main-wrapper
+			
+			block content
+				| No content defined
+
+			footer.footer
+				p &copy; 2016 EATON. All right reserved.
+				ul.footersocials-list
+					li
+						a(href='https://www.facebook.com/eatoncorporation/') Facebook
+					li
+						a(href='https://twitter.com/eatoncorp/') Twitter
+					li
+						a(href='http://www.linkedin.com/company/eaton-corporation/') Linkedin
+					li
+						a(href='http://www.youtube.com/channel/UCF7vz2IAPNHv7BKTiFC9Xhw') Youtube
+					li
+						a(href='http://www.eaton.com/Eaton/OurCompany/NewsEvents/NewsReleases/index.htm') Eaton newsfeeds
+					
+
+	script(src="js/libs/jquery.min.js")
+	script(src="js/libs/masonry.pkgd.min.js")
+	script(src="js/libs/selectordie.min.js")
+	script(src="js/libs/select2.min.js")
+	script(src="js/libs/slick.min.js")
+	script(src="js/main.js")
+	script(async defer src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCJKgZkqipRSU8QhkE9vuTm857NAv6idgw&callback=initMap')

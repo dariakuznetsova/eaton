@@ -1,0 +1,61 @@
+extends ../main.jade
+
+block title
+	title Каталог
+
+block header
+	include ../blocks/_header
+
+block content
+	main.main
+		.main-content.main-content__manufacturer.choose-cnt
+			ul.main-menu
+				li
+					a(href='#').help-section__link.app-link Application
+						img(src='images/app.svg' alt='icon')
+				li
+					a(href='catalogue.html') Products
+				li
+					a(href='#') Manufacturer
+				li
+					a(href='features2.html') Legacy
+				li.active
+					a(href='choose.html').compare__link Compare
+						p 3
+						+icon("graphic",25,23)
+
+			.manufacturer-block.choose-block
+				.manufacturer__text
+					p.j-text-info The Select and Compare option lets you choose any Eaton metering product listed and compare it against up to three  other Eaton products. The Meter Wizard will then compile a side-by-side listing of any feature advantages or limitations of the selected meters compared to the selected base meter, along with detailed side-by-side feature comparisons.
+					.fade-effect
+					.more-text-link
+						a(href='javascript:;').j-more-text-link
+							+icon("arrow",30,20)
+
+				.meter-quantity-block
+					ul.meter-quantity-list
+						li.j-chosen-meter 1
+						li.j-chosen-meter 2
+						li.j-chosen-meter 3
+						li.j-chosen-meter 4
+					span Meters to compare
+
+				form.meter-choose-form.j-meter-choose-form
+					.column
+						- var label = ['IQ 35M','IQ 130','IQ 140','IQ 150','IQ 150S','IQ 230','IQ 250S','IQ 260','IQ DP - 4000','IQ DP - 4100','IQA - 6400','IQA - 6600','PXMP','PXM 2250','PXM 2260','PXM 2270','PXM 2280','PXM 2290','Power Xpert Meter 4000','Power Xpert Meter 6000','Power Xpert Meter 8000']
+						each label_item in label
+							fieldset
+								label
+									input(type='checkbox').checked__elem.j-checkbox-input
+									.checkbox-fake.j-fakebox
+										+icon("checked",14,11)
+									span= label_item
+
+					.buttons-block
+						a(href='compare.html').results-button View results
+						//- button(type='submit').results-button View results
+						button(type='reset').reset-button Clear
+
+
+
+

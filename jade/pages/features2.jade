@@ -1,0 +1,355 @@
+extends ../main.jade
+
+block title
+	title Каталог
+
+block header
+	include ../blocks/_header
+
+block content
+	main.main
+		.main-content.main-content__manufacturer.choose-cnt.features-cnt
+			ul.main-menu
+				li
+					a(href='#').help-section__link.app-link Application
+						img(src='images/app.svg')
+				li.active
+					a(href='catalogue.html') Products
+				li
+					a(href='manufacturer.html') Manufacturer
+				li
+					a(href='features2.html') Legacy
+				li
+					a(href='choose.html').compare__link Compare
+						+icon("graphic",25,23)
+
+			.features-block
+				.left-block
+					a(href='#' onclick="javascript:history.back();").features-block__link
+						+icon("arrow2",40,50)
+				form.meter-choose-form
+					.features-wrapper
+						.features-list__title Instrumentation
+						ul.features-list
+							- var label = ['Current & Voltage - Per Phase','Current & Voltage - 3 Phase Average','Current & Voltage - 3 Phase Min, Max','Current & Voltage - % Phase Unbalance','Ground Current','Neutral Current','Voltage Neutral-Ground','View Current & Voltage Phasors on Display','Current Demand','Watts','Wh --Net','Wh --Positive & Negative','Watt Demand','Va','Vah','Va Demand','Vars','Varh','Var Demand','Time of Use Energy','Demand Metering','4 Quadrant Energy','Frequency','Apparent Power Factor','Displacement  Power Factor','Per Phase Power Factor']
+							each label_item in label
+								li
+									fieldset
+										label
+											input(type='checkbox').checked__elem
+											.checkbox-fake
+												+icon("checked",14,11)
+											span= label_item
+
+					.features-wrapper
+						.features-list__title Power Quality Analysis
+						ul.features-list
+							- var label = ['%Thd - Current & Voltage','Individual Harmonics Magnitude','View Harmonic Spectrum At Device','K - Factor','Crest Factor','ITIC Perfomance Curve','Flicker','PQ Index Graph','Number of 9’S Availability']
+							each label_item in label
+								li
+									fieldset
+										label
+											input(type='checkbox').checked__elem
+											.checkbox-fake
+												+icon("checked",14,11)
+											span= label_item
+
+					.features-wrapper
+						.features-list__title Waveform Analysis
+						ul.features-list
+							li
+								fieldset
+									label
+										input(type='checkbox').checked__elem
+										.checkbox-fake
+											+icon("checked",14,11)
+										span Waveform Capture On Threshold / Input
+							li
+								fieldset
+									label
+										input(type='checkbox').checked__elem
+										.checkbox-fake
+											+icon("checked",14,11)
+										span Voltage Disturbance Wave Capture Trigger
+							li
+								fieldset
+									label
+										input(type='checkbox').checked__elem
+										.checkbox-fake
+											+icon("checked",14,11)
+										span Excess Dv / Dt Or Interruption Capture Trigger
+							li
+								fieldset
+									label
+										input(type='checkbox').checked__elem
+										.checkbox-fake
+											+icon("checked",14,11)
+										span Stores Waveform Captures
+							li.item-with-select
+								fieldset
+									label
+										input(type='checkbox').checked__elem.j-select-input
+										.checkbox-fake
+											+icon("checked",14,11)
+										span Sampling Rate
+									select.select
+										option 4 / cycle
+										option 2 / cycle
+										option something else
+										option something else
+							li.item-with-select
+								fieldset
+									label
+										input(type='checkbox').checked__elem.j-select-input
+										.checkbox-fake
+											+icon("checked",14,11)
+										span Waveform Recording Duration
+									select.select
+										option 4 / cycle
+										option 2 / cycle
+										option something else
+										option something else
+							li
+								fieldset
+									label
+										input(type='checkbox').checked__elem
+										.checkbox-fake
+											+icon("checked",14,11)
+										span Impulsive Transient Capture
+							li
+								fieldset
+									label
+										input(type='checkbox').checked__elem
+										.checkbox-fake
+											+icon("checked",14,11)
+										span Transient Capture on Neutral
+							li
+								fieldset
+									label
+										input(type='checkbox').checked__elem
+										.checkbox-fake
+											+icon("checked",14,11)
+										span Captured Wavefroms Displayed on Meter / GUI
+							li
+								fieldset
+									label
+										input(type='checkbox').checked__elem
+										.checkbox-fake
+											+icon("checked",14,11)
+										span Comtrade - Standart IEEE File Format
+
+					.features-wrapper
+						.features-list__title Logging & Alarms
+						ul.features-list
+							li.item-with-select
+								fieldset
+									label
+										input(type='checkbox').checked__elem.j-select-input
+										.checkbox-fake
+											+icon("checked",14,11)
+										span Memory (Standart / Optional)
+									select.select
+										option Yes
+										option No
+							li
+								fieldset
+									label
+										input(type='checkbox').checked__elem
+										.checkbox-fake
+											+icon("checked",14,11)
+										span Min / Max Log
+							li
+								fieldset
+									label
+										input(type='checkbox').checked__elem
+										.checkbox-fake
+											+icon("checked",14,11)
+										span Event Log
+							li
+								fieldset
+									label
+										input(type='checkbox').checked__elem
+										.checkbox-fake
+											+icon("checked",14,11)
+										span Data Logging
+							li
+								fieldset
+									label
+										input(type='checkbox').checked__elem
+										.checkbox-fake
+											+icon("checked",14,11)
+										span Time / Date Stamp
+							li
+								fieldset
+									label
+										input(type='checkbox').checked__elem
+										.checkbox-fake
+											+icon("checked",14,11)
+										span Audible Alarm
+							li
+								fieldset
+									label
+										input(type='checkbox').checked__elem
+										.checkbox-fake
+											+icon("checked",14,11)
+										span LED Alarm Indicator
+							li
+								fieldset
+									label
+										input(type='checkbox').checked__elem
+										.checkbox-fake
+											+icon("checked",14,11)
+										span Email On Alarm
+
+					.features-wrapper
+						.features-list__title Time Synchronization
+						ul.features-list
+							- var label = ['GPS Clock Synchronization Capability via DFC - 77','Clock Synchronization via Ethernet Network via NTP','1 Millisecond Timestamp Resolution']
+							each label_item in label
+								li
+									fieldset
+										label
+											input(type='checkbox').checked__elem.j-checkbox-input
+											.checkbox-fake.j-fakebox
+												+icon("checked",14,11)
+											span= label_item
+
+					.features-wrapper
+						.features-list__title I / O Capability
+						ul.features-list
+							- var label = ['Programmable Discrete Inputs','Synchronize Demand Window Pulse Input','Programmable Relay Inputs','Voltage Disturbance Trip','Load Shedding','Prog. Pulse Output --Wh, Varh, Vah','KYZ Output','Analog Input','Analog Output']
+							each label_item in label
+								li
+									fieldset
+										label
+											input(type='checkbox').checked__elem.j-checkbox-input
+											.checkbox-fake.j-fakebox
+												+icon("checked",14,11)
+											span= label_item
+
+					.features-wrapper
+						.features-list__title Communications
+						ul.features-list
+							- var label = ['Native Communications Ports','Fiber - Optic Thernet Port','10 / 100 RJ - 45 Ethernet Port','802.11 Wireless Ethernet','INCOM','Modbus RTU (RS - 485)','Modbus TCP','BACnet MS / TP','BACnet / IP','Internet / HTTP Server Built - In','Network Time Protocol (NTP)','Simple Network Managment Protocol (SNMP)','File Transfer Protocol (FTP) Built - In','Email (SMTP)','Graphic Display w/ Built-In','Graphic Display (Local - Remote)','Fully Programmable wo/ dedicated software']
+							each label_item in label
+								li
+									fieldset
+										label
+											input(type='checkbox').checked__elem.j-checkbox-input
+											.checkbox-fake.j-fakebox
+												+icon("checked",14,11)
+											span= label_item
+
+					.features-wrapper
+						.features-list__title Operational Specifications 
+						ul.features-list
+							li.item-with-select
+								fieldset
+									label
+										input(type='checkbox').checked__elem.j-checkbox-input.j-select-input
+										.checkbox-fake.j-fakebox
+											+icon("checked",14,11)
+										span +/- % Accuracy Current
+									select.select
+										option 1
+										option 2
+										option 3
+										option 4
+							li.item-with-select
+								fieldset
+									label
+										input(type='checkbox').checked__elem.j-checkbox-input.j-select-input
+										.checkbox-fake.j-fakebox
+											+icon("checked",14,11)
+										span +/- % Accuracy Voltage
+									select.select
+										option 1
+										option 2
+										option 3
+										option 4
+							li.item-with-select
+								fieldset
+									label
+										input(type='checkbox').checked__elem.j-checkbox-input.j-select-input
+										.checkbox-fake.j-fakebox
+											+icon("checked",14,11)
+										span Meets ANSI % Revenue Accuracy
+									select.select
+										option C12.16 (1.0)
+										option C12.17 (1.0)
+										option C12.18 (1.0)
+							li.item-with-select
+								fieldset
+									label
+										input(type='checkbox').checked__elem.j-checkbox-input.j-select-input
+										.checkbox-fake.j-fakebox
+											+icon("checked",14,11)
+										span Meets IEC % Revenue Accuracy
+									select.select
+										option 62053 (1.0)
+										option 62054 (1.0)
+										option 62055 (1.0)
+							li.item-with-select
+								fieldset
+									label
+										input(type='checkbox').checked__elem.j-checkbox-input.j-select-input
+										.checkbox-fake.j-fakebox
+											+icon("checked",14,11)
+										span Operating Temp Range
+									select.select
+										option -20 to 50
+										option 50 to 70
+							li.item-with-select
+								fieldset
+									label
+										input(type='checkbox').checked__elem.j-checkbox-input.j-select-input
+										.checkbox-fake.j-fakebox
+											+icon("checked",14,11)
+										span Number of Current Inputs
+									select.select
+										option 3
+										option 4
+										option 5
+							li
+								fieldset
+									label
+										input(type='checkbox').checked__elem.j-checkbox-input.j-select-input
+										.checkbox-fake.j-fakebox
+											+icon("checked",14,11)
+										span No PTs Below 600 Vac
+							li
+								fieldset
+									label
+										input(type='checkbox').checked__elem.j-checkbox-input.j-select-input
+										.checkbox-fake.j-fakebox
+											+icon("checked",14,11)
+										span No PTs For Floating 3 Wire (Delta) < Vac 
+							li
+								fieldset
+									label
+										input(type='checkbox').checked__elem.j-checkbox-input.j-select-input
+										.checkbox-fake.j-fakebox
+											+icon("checked",14,11)
+										span Separate Ground & Neutral Current Inputs
+							li
+								fieldset
+									label
+										input(type='checkbox').checked__elem.j-checkbox-input.j-select-input
+										.checkbox-fake.j-fakebox
+											+icon("checked",14,11)
+										span Revenue Approved --Industry Canada
+
+
+
+
+
+
+
+
+					//- .buttons-block
+					//- 	button(type='submit').results-button View results
+					//- 	button(type='reset').reset-button Clear
+
+
+
+

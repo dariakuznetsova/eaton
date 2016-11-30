@@ -1,0 +1,109 @@
+extends ../main.jade
+
+block title
+	title
+
+block header
+	include ../blocks/_header5
+
+block content
+	main.main.main_contact
+		.main-content
+			.main-content_wrap
+				h1 Contact us
+				.subtitle Your Eaton sales representative can help you fully understand the options, benefits, and solutions that Eaton meter sockets can provide.
+				form.contact-form
+					fieldset
+						.input-wrap
+							input(type='text' placeholder='Your name').j-input
+						.input-wrap
+							input(type='text' placeholder='E-mail').j-input
+					fieldset
+						input(type='text' placeholder='Topic').j-input
+					fieldset
+						textarea(placeholder='Message').j-input
+					button(type='submit') Send message
+			
+		aside.aside.aside__contacts.j-contact-aside
+			.contacts__map-text
+				.title Find Sales Office
+				.city
+					input(type='text' value='Pittsburgh PA')
+					//- +icon("loupe",35,35)
+					+icon("loupe",24,24)
+				.contacts__map-links
+					a(href='javascript:;').j-list-view List
+					a(href='javascript:;').j-map-view.active Map
+
+			.contacts__map#map
+			.sales-addresses-block
+				.sales-office-block
+					.title Pittsburgh Sales Office Map
+					.address
+						.img-wrapper
+							img(src='images/location.svg' alt='')
+						span Address:
+						| 1000 Cherrington Parkway 
+						br
+						| Coraopolis PA  15108
+					.phone
+						.img-wrapper
+							img(src='images/tel.svg' alt='')
+						span Phone:
+						| (412) 893-3300
+					.location-type Location Type: Sales Office
+					.distance Distance from your Zip Code: 13.1 miles
+
+				.sales-office-block
+					.title Eaton's Electrical Sector Americas Headquarters	
+					.address
+						.img-wrapper
+							img(src='images/location.svg' alt='')
+						span Address:
+						| 1000 Cherrington Parkway
+						br
+						| Coraopolis PA  15108
+					.phone
+						.img-wrapper
+							img(src='images/tel.svg' alt='')
+						span Phone:
+						| (412) 893-3300
+					.location-type Location Type: Sales Office
+					.distance Distance from your Zip Code: 13.1 miles
+
+				.sales-office-block
+					.title State College Sales Office
+					.address
+						.img-wrapper
+							img(src='images/location.svg' alt='')
+						span Address:
+						| 434 Grace Street
+						br
+						| Northern Cambria PA 15714
+					.phone
+						.img-wrapper
+							img(src='images/tel.svg' alt='')
+						span Phone:
+						| 814-948-0701
+					.fax
+						span Fax:
+						| 814-948-0715
+					.location-type Location Type: Sales Office
+					.distance Distance from your Zip Code: 13.1 miles
+				
+				.sales-office-block
+					.title Pittsburgh Sales Office Map
+					.address
+						.img-wrapper
+							img(src='images/location.svg' alt='')
+						span Address:
+						| 1000 Cherrington Parkway 
+						br
+						| Coraopolis PA  15108
+					.phone
+						.img-wrapper
+							img(src='images/tel.svg' alt='')
+						span Phone:
+						| (412) 893-3300
+					.location-type Location Type: Sales Office
+					.distance Distance from your Zip Code: 13.1 miles

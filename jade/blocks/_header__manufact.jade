@@ -1,0 +1,31 @@
+header.header#header
+	.header__first-line
+		.header-menu.menu__logo_modify.header-menu__manufactorer
+			ul.header-menu-list
+				.left-block
+					li.header-menu__logo
+						a(href='/')
+							img(src='images/logo2.png' alt='логотип')
+					li
+						a(href='/').header-menu__desc Meter Selection Wizard
+				.right-block
+					li.header-menu__tel 1-800-809-2772
+					li.header-menu__email pqsupport@eaton.com
+
+		.header-sales-office
+				a(href='contact.html')
+					span Contact us
+						+icon("envelope",30,27)
+
+		.filter-mobile-link
+			.open-filters
+				.search-input-wrapper.mobile-search__manufacturer
+					input(type='text' placeholder='Quick finder')
+					img(src='images/loupe.svg')
+					+icon("filter",24,24)
+				//- span Quick finder
+				//- 	+icon("loupe",24,24)
+				//- +icon("filter",24,24)
+			//- .close-filters.j-filter-option
+			//- 	span Close finder
+			//- 		+icon("close",20,20)

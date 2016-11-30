@@ -1,0 +1,303 @@
+extends ../main-maps.jade
+
+block title
+	title
+
+block header
+	include ../blocks/_header9
+
+block content
+	main.main.detailed.meters-detailed#top
+		.main-content
+			.meters__upper-block
+				a(href='#' onclick="javascript:history.back();").back-link
+					+icon("arrow4",55,40)
+				ul.main-menu.main-menu_modify.j-meters-menu
+					li.active
+						a(href='catalogue.html') Products
+					li
+						a(href='manufacturer.html') Manufacturer
+					li
+						a(href='features2.html') Legacy
+					li
+						a(href='choose.html').compare__link Compare
+							+icon("graphic",25,23)
+				a(href='javascript:;').meters__burger-link.j-burger-link
+					img(src='images/grid.svg')
+
+			.item-block
+				.item-block__pic
+					.img
+						img(src='images/meter1.jpg' alt='фото товара')
+					.item-block__socials
+						a(href='compare.html').compare-link
+							span Compare
+								+icon("cross",7,7)
+						ul.socials-list
+							li
+								a(href='#')
+									img(src='images/fb.svg' alt='фэйсбук')
+									img(src='images/fb-blue.svg' alt='фэйсбук')
+							li
+								a(href='#')
+									img(src='images/mail.svg' alt='почта')
+									img(src='images/mail-blue.svg' alt='фэйсбук')
+							li
+								a(href='#')
+									img(src='images/more.svg' alt='другое')
+									img(src='images/more-blue.svg' alt='фэйсбук')
+						a(href='#').documentation-link
+							img(src='images/doc1.svg')
+							| Documentation
+				.item-block__info
+					.item__title IQ 140 Series
+					.item__subtitle Technical Data:  TD02601018E
+					.item__description
+						p The IQ 140 meter provides the ability to monitor volts and amps per phase along with power. It meets ANSI C12.20 standards for accuracy of 0.5 percent and has optional Modbus/KYZ output.
+					.item__specifications 
+						span Instrumentation
+						ul.specifications-list
+							li
+								+icon("check",16,16)
+								p Current & Voltage - Per Phase
+							li
+								+icon("check",16,16)
+								p Current & Voltage - 3 Phase Min, Max
+							li
+								+icon("check",16,16)
+								p Neutral Current 
+							li
+								+icon("check",16,16)
+								p Current Demand
+							li
+								+icon("check",16,16)
+								p Watts
+							li
+								+icon("check",16,16)
+								p Watt Demand
+							li
+								+icon("check",16,16)
+								p Va
+							li
+								+icon("check",16,16)
+								p Va Demand
+							li
+								+icon("check",16,16)
+								p Vars
+							li
+								+icon("check",16,16)
+								p Var Demand
+							li
+								+icon("check",16,16)
+								p Demand Metering
+							li
+								+icon("check",16,16)
+								p Frequency
+							li
+								+icon("check",16,16)
+								p Apparent Power Factor
+					.item__specifications 
+						span Logging & Alarms
+						ul.specifications-list
+							li
+								+icon("check",16,16)
+								p Min/Max Log
+					.item__specifications 
+						span Communications
+						ul.specifications-list
+							li
+								+icon("check",16,16)
+								p 10/100 RJ-45 Ethernet Port  (option)
+							li
+								+icon("check",16,16)
+								p Modbus RTU (RS-485)  (option)
+							li
+								+icon("check",16,16)
+								p Modbus TCP (option)
+							li
+								+icon("check",16,16)
+								p Fully Programmable wo/ dedicated software
+					.item__specifications 
+						span Operational Specifications
+						ul.specifications-list
+							li
+								+icon("check",16,16)
+								p +/- % Accuracy --Current:
+									span '0.25 Reading
+							li
+								+icon("check",16,16)
+								p +/- % Accuracy --Voltage:
+									span 0.25 Reading
+							li
+								+icon("check",16,16)
+								p Meets Ansi % Revenue Accuracy:
+									span C12.20(0.5)
+							li
+								+icon("check",16,16)
+								p Meets IEC % Revenue Accuracy:
+									span 687(0.5)
+							li
+								+icon("check",16,16)
+								p Operating Temp. Range --Degrees C:
+									span '-20 to 70
+							li
+								+icon("check",16,16)
+								p Number of Current Inputs:
+									span 3
+							li
+								+icon("check",16,16)
+								p No PTs Below 600 Vac:
+									span yes
+							li
+								+icon("check",16,16)
+								p No PTs For Floating 3 Wire (Delta) < 600 Vac:
+									span yes
+
+			.gallery-wrapper
+				a(href='#top').up-link.j-up-link
+					+icon("arrow2",40,50)
+				ul.products-menu-list.j-meters-gallery
+					a(href='meter_detailed.html').products-menu__item.products-menu__item_modify
+						.products-item__links
+							.title TD02601015E
+							.title-icon
+								+icon("info1",22,22)
+						.products-item__img
+							img(src='images/article1.png' alt='фото товара')
+						.cnt__wrapper
+							.products-item__name Eaton IQ140
+							.products-item__filter-items
+								span Power Energy Metering
+								span Electrical Houses (E-House)
+							.products-item__bottom
+								.compare-link
+									span Compare
+										+icon("cross",7,7)
+								.share-link
+									+icon("share",25,25)
+
+					a(href='meter_detailed.html').products-menu__item.products-menu__item_modify
+						.products-item__links
+							.title TD02601015E
+							.title-icon
+								+icon("info1",22,22)
+						.products-item__img
+							img(src='images/article2.png' alt='фото товара')
+						.cnt__wrapper
+							.products-item__name Eaton IQ140
+							.products-item__filter-items
+								span Power Energy Metering
+								span Electrical Houses (E-House)
+							.products-item__bottom
+								.compare-link
+									span Compare
+										+icon("cross",7,7)
+								.share-link
+									+icon("share",25,25)
+
+					a(href='meter_detailed.html').products-menu__item.products-menu__item_modify
+						.products-item__links
+							.title TD02601015E
+							.title-icon
+								+icon("info1",22,22)
+						.products-item__img
+							img(src='images/article3.png' alt='фото товара')
+						.cnt__wrapper
+							.products-item__name Eaton IQ140
+							.products-item__filter-items
+								span Power Energy Metering
+								span Electrical Houses (E-House)
+							.products-item__bottom
+								.compare-link
+									span Compare
+										+icon("cross",7,7)
+								.share-link
+									+icon("share",25,25)
+
+					a(href='meter_detailed.html').products-menu__item.products-menu__item_modify
+						.products-item__links
+							.title TD02601015E
+							.title-icon
+								+icon("info1",22,22)
+						.products-item__img
+							img(src='images/article2.png' alt='фото товара')
+						.cnt__wrapper
+							.products-item__name Eaton IQ140
+							.products-item__filter-items
+								span Power Energy Metering
+								span Electrical Houses (E-House)
+							.products-item__bottom
+								.compare-link
+									span Compare
+										+icon("cross",7,7)
+								.share-link
+									+icon("share",25,25)
+
+					a(href='meter_detailed.html').products-menu__item.products-menu__item_modify
+						.products-item__links
+							.title TD02601015E
+							.title-icon
+								+icon("info1",22,22)
+						.products-item__img
+							img(src='images/article3.png' alt='фото товара')
+						.cnt__wrapper
+							.products-item__name Eaton IQ140
+							.products-item__filter-items
+								span Power Energy Metering
+								span Electrical Houses (E-House)
+							.products-item__bottom
+								.compare-link
+									span Compare
+										+icon("cross",7,7)
+								.share-link
+									+icon("share",25,25)
+
+					a(href='meter_detailed.html').products-menu__item.products-menu__item_modify
+						.products-item__links
+							.title TD02601015E
+							.title-icon
+								+icon("info1",22,22)
+						.products-item__img
+							img(src='images/article1.png' alt='фото товара')
+						.cnt__wrapper
+							.products-item__name Eaton IQ140
+							.products-item__filter-items
+								span Power Energy Metering
+								span Electrical Houses (E-House)
+							.products-item__bottom
+								.compare-link
+									span Compare
+										+icon("cross",7,7)
+								.share-link
+									+icon("share",25,25)
+
+					a(href='meter_detailed.html').products-menu__item.products-menu__item_modify
+						.products-item__links
+							.title TD02601015E
+							.title-icon
+								+icon("info1",22,22)
+						.products-item__img
+							img(src='images/article2.png' alt='фото товара')
+						.cnt__wrapper
+							.products-item__name Eaton IQ140
+							.products-item__filter-items
+								span Power Energy Metering
+								span Electrical Houses (E-House)
+							.products-item__bottom
+								.compare-link
+									span Compare
+										+icon("cross",7,7)
+								.share-link
+									+icon("share",25,25)
+
+
+		aside.aside.j-map-aside
+			a(href='how-to-buy.html').aside__how-to-buy-link
+				+icon("arrow5",60,40)
+				.wrapper
+					.how-to-buy
+						p How to buy
+						span Find sales office
+					.contacts__map.map__modify#map2
+		a(href='how-to-buy.html').show-results-link.show-results-link__map.j-green-button How to buy
+
