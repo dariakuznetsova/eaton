@@ -8,13 +8,13 @@ block header
 
 block content
 	main.main.detailed.meters-detailed#top
-		.main-content
+		.main-content#docs
 			.meters__upper-block
 				a(href='#' onclick="javascript:history.back();").back-link
 					+icon("arrow4",55,40)
 				ul.main-menu.main-menu_modify.j-meters-menu
 					li.active
-						a(href='catalogue.html') Products
+						a(href='menu-products.html') Products
 					li
 						a(href='manufacturer.html') Manufacturer
 					li
@@ -23,13 +23,16 @@ block content
 						a(href='choose.html').compare__link Compare
 							+icon("graphic",25,23)
 				a(href='javascript:;').meters__burger-link.j-burger-link
-					img(src='images/grid.svg')
+					.hamburger.hamburger--spin
+						span.hamburger-box
+							span.hamburger-inner
+
 
 			.item-block
 				.item-block__pic
 					.img
 						img(src='images/meter1.jpg' alt='фото товара')
-					.item-block__socials
+					.item-block__socials.socials__modify
 						a(href='compare.html').compare-link
 							span Compare
 								+icon("cross",7,7)
@@ -46,10 +49,104 @@ block content
 								a(href='#')
 									img(src='images/more.svg' alt='другое')
 									img(src='images/more-blue.svg' alt='фэйсбук')
-						a(href='#').documentation-link
+						a(href='javascript:;').documentation-link.j-documentation-link
 							img(src='images/doc1.svg')
+							img(src='images/doc2.svg')
 							| Documentation
-				.item-block__info
+							+icon("close",15,15)
+
+				.item-block__info.item-block__docs.j-block-doc
+					.item__title IQ 140 Series
+					.item__subtitle Technical Data:  TD02601018E
+					.item__description
+						p The IQ 140 meter provides the ability to monitor volts and amps per phase along with power. It meets ANSI C12.20 standards for accuracy of 0.5 percent and has optional Modbus/KYZ output.
+					.item__specifications
+						a(href='javascript:;').j-doc-specification-link
+							span Catalogs
+								+icon("cross",7,7)
+						ul.specifications-list.j-specifications-list
+							li
+								//- +icon("check",16,16)
+								img(src='images/download1.svg' alt='icon')
+								a(href='file.pdf') Metering devices, protective relays, software and connectivity 
+									span.weight 11MB
+					.item__specifications
+						a(href='javascript:;').j-doc-specification-link
+							span Product Aids
+								+icon("cross",7,7)
+						ul.specifications-list.j-specifications-list
+							li
+								img(src='images/download1.svg' alt='icon')
+								//- +icon("check",16,16)
+								a(href='file.pdf') Eaton’s IQ 100 electronic power meter (IQ 130 - IQ 140 - IQ 150)
+									span.weight 1MB
+								p.specification High-end power management performance
+							li
+								//- +icon("check",16,16)
+								img(src='images/download2.svg' alt='icon')
+								a(href='file.pdf') IQ and PXM2000 Meter Family Comparison
+									span.weight 550KB
+							li
+								//- +icon("check",16,16)
+								img(src='images/download3.svg' alt='icon')
+								a(href='file.pdf') Seven Important Reasons for Measurement and Verification
+									span.weight 1MB
+								p.specification Significant opportunities exist for you to realize energy cost reductions in your plant or facility, assuming you have state-of-the-art products in place to assure accurate energy use measurement and verification.
+							li
+								//- +icon("check",16,16)
+								img(src='images/download3.svg' alt='icon')
+								a(href='file.pdf') Why Buy an Eaton Meter 
+									span.weight 1MB
+								p.specification All facility electrical users have one thing in common. Their electrical system can greatly effect company production, productivity and profits. Here are a few questions/answers of why installing a new Eaton meter makes good sense.
+					.item__specifications
+						a(href='javascript:;').j-doc-specification-link
+							span Technical Data
+								+icon("cross",7,7)
+						ul.specifications-list.j-specifications-list
+							li
+								img(src='images/download2.svg' alt='icon')
+								//- +icon("check",16,16)
+								a(href='file.pdf') CT-SP (Split Core, 100A to 2000A/5A) series current transformers
+									span.weight 1MB
+								p.specification Split core 5 amp output CTs. If utilized in conjunction with PXMP, CS005 and PXMP-MM10MA must be used.
+							li
+								img(src='images/download1.svg' alt='icon')
+								//- +icon("check",16,16)
+								a(href='file.pdf') Eaton IQ 100 Series Meters Tech Data
+							li
+								img(src='images/download1.svg' alt='icon')
+								//- +icon("check",16,16)
+								a(href='file.pdf') M (Split Core, 100A to 4000A/5A) and S(Solid Core, 25A to 4000A/5A) series current transformers 
+									span.weight 1MB
+								p.specification Split and solid core 5 amp output CTs. If utilized in conjunction with PXMP, CS005 and PXMP-MM10MA must be used.
+							li
+								//- +icon("check",16,16)
+								img(src='images/download1.svg' alt='icon')
+								a(href='file.pdf') Metering products family 
+									span.weight 1MB
+								p.specification Eaton’s metering products provide solutions needed to monitor and manage all aspects of an electrical distribution system.
+					.item__specifications
+						a(href='javascript:;').j-doc-specification-link
+							span Instructions
+								+icon("cross",7,7)
+						ul.specifications-list.j-specifications-list
+							li
+								img(src='images/download3.svg' alt='icon')
+								//- +icon("check",16,16)
+								a(href='file.pdf') IQ 100 Series Meter Quick Start Guide  
+									span.weight 1MB
+							li
+								img(src='images/download3.svg' alt='icon')
+								//- +icon("check",16,16)
+								a(href='file.pdf') IQ 100 Series Transducer Quick Start Guide
+									span.weight 1MB
+							li
+								img(src='images/download1.svg' alt='icon')
+								//- +icon("check",16,16)
+								a(href='file.pdf') Panel Mounting Adapter Kit For IQ 100/200 Series and PXM 2000 Meters
+									span.weight 1MB
+
+				.item-block__info.j-block-info
 					.item__title IQ 140 Series
 					.item__subtitle Technical Data:  TD02601018E
 					.item__description
@@ -152,7 +249,6 @@ block content
 								+icon("check",16,16)
 								p No PTs For Floating 3 Wire (Delta) < 600 Vac:
 									span yes
-
 			.gallery-wrapper
 				a(href='#top').up-link.j-up-link
 					+icon("arrow2",40,50)

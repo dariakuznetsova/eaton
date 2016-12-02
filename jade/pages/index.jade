@@ -4,73 +4,148 @@ block title
 	title
 
 block header
-	include ../blocks/_header3
+	include ../blocks/_header__indexMeter
 
 block content
-	main.main.main_home
+	main.main.main_home.main_home-meters
 		.main-content.main-content__home.j-main-products
+			ul.main-menu.main-menu_modify.main-menu__products
+				li
+					a(href='#').help-section__link.app-link Application
+						img(src='images/app.svg')
+				li
+					a(href='menu-products.html') Products
+				li
+					a(href='manufacturer.html') Manufacturer
+				li
+					a(href='features2.html') Legacy
+				li
+					a(href='choose.html').compare__link Compare
+						+icon("graphic",25,23)
+
 			.home-wrapper.j-home-wrapper
-				h1.title_main Group 
-					span.h1-color Metering
+				h1.title_main Find the best Eaton Meter 
 					br
-					span.h1-light and 
-					| Meter Breakers
-				.subtitle_main Eaton's Group Metering and Meter Breaker product lines meter electricity in single family homes, multi-tenant apartments or condominiums, or office complexes. Used with a load center or main breaker, they are also suitable for rural service entrance, mobile homes, and construction site temporary power.
+					| For every situation
+				.subtitle_main Eaton's wide range of metering products lets you monitor and manage your equipment like never before. But which Eaton meter is right for your project or application? With Eaton's Meter Selection Wizard, you can select by manufacturer, feature, or even compare Eaton meters side by side to find out which products best suit your needs. Click on one of the tabs above to get started.
 
-			ul.home-menu-list.j-home-list
-				li.home-menu__item.j-home-item
-					.blue-line
-					a(href='products.html').home-menu__link
-						.select-elem Select
-						.home-menu__title Single Meter Sockets
-						.home-menu__select Select
-							+icon("arrow3",30,20)
-						.home-menu__img
-							img(src='images/1.png' alt='socket')
-						.home-menu__text.j-home-text Eaton's line of single position, self-contained meter sockets house the utilities electrical watthour meters in residential and commercial buildings. Choose from the widest range of utility approved sockets in the industry, including 100 - 320 A units and designs such as ringless, bypass, and more.
+			.home__main-content
+				ul.categories
+					li
+						a(href='menu-products.html')
+							.img
+								img(src='images/meter-icon4.png' alt='')
+							.img
+								img(src='images/meter-icon4-blue.png' alt='')
+							p wide range of metering products
+					li
+						a(href='manufacturer.html').link-second
+							.img
+								img(src='images/meter-icon3.png' alt='')
+							.img
+								img(src='images/meter-icon3-blue.png' alt='')
+							p select by manufacturer
+					li
+						a(href='features2.html').link-third
+							.img
+								img(src='images/meter-icon2.png' alt='')
+							.img
+								img(src='images/meter-icon2-blue.png' alt='')
+							p select by application
+					li
+						a(href='choose.html').link-fourth
+							.img
+								img(src='images/meter-icon1.png' alt='')
+							.img
+								img(src='images/meter-icon1-blue.png' alt='')
+							p Compare meters
 
-				li.home-menu__item.j-home-item
-					.blue-line
-					a(href='products.html').home-menu__link
-						.select-elem Select
-						.home-menu__title Group Metering
-						.home-menu__select Select
-							+icon("arrow3",30,20)
-						.home-menu__img
-							img(src='images/2.png' alt='meters')
-						.home-menu__text Eaton's Group Metering line offers All-In-One and Modular Metering.
-						ul.home-menu__characteristics
-							li Meter Packs
-							li Main Service Modules
-							li Main Circuit Breakers
-							li Surge Metering
-							li Residential Meter Stacks
-							li Commercial Stacks
-							li Phase balancing
-				li.home-menu__item.j-home-item
-					.blue-line
-					a(href='products.html').home-menu__link
-						.select-elem Select
-						.home-menu__title Meter Breakers
-						.home-menu__select Select
-							+icon("arrow3",30,20)
-						.home-menu__img
-							img(src='images/3.png' alt='meter breakers')
-						.home-menu__text Eaton's complete line of meter breakers are combination service entrance devices that meet virtually all electrical utility requirements.
-						ul.home-menu__characteristics
-							li House Panels
-							li Residential Meter
+				ul.categories__photos.j-categoty-photo
+					li.j-category-item
 
-		aside.aside.aside__products.aside_home
+						img(src='images/index-pic1.jpg' alt='photo').j-category-img
+						a(href='#').category__link.category__link1
+							.icon-wrapper
+								img(src='images/20.png' alt='icon')
+								img(src='images/20-colored.png' alt='icon')
+							.category-text-wrapper.j-category-text
+								.category__title Power Energy Metering
+								.category__text Energy meter is a device that measures the amount of electric energy consumed by a residence, a business, or an electrically powered device. When energy savings during certain periods are desired, some meters may measure demand, the maximum use of power in some interval
+					li.j-category-item
+						img(src='images/index-pic2.jpg' alt='photo').j-category-img
+						a(href='#').category__link.category__link2
+							.icon-wrapper
+								img(src='images/21.png' alt='icon')
+								img(src='images/21-colored.png' alt='icon')
+							.category-text-wrapper.j-category-text
+								.category__title Power Quality
+								.category__text Electric power quality (EPQ), or simply Power quality, refers to "maintaining the near sinusoidal waveform of power distribution bus voltages and currents at rated magnitude and frequency.",determining the fitness of electric power to consumer devices. 
+					li.j-category-item
+						img(src='images/index-pic3.jpg' alt='photo').j-category-img
+						a(href='#').category__link.category__link3
+							.icon-wrapper
+								img(src='images/22.png' alt='icon')
+								img(src='images/22-colored.png' alt='icon')
+							.category-text-wrapper.j-category-text
+								.category__title Sub-Metering
+								.category__text Submetering is the implementation of a system that allows a landlord, property management firm, condominium association, homeowners association, or other multi-tenant property to bill tenants for individual measured utility usage.
+					li.j-category-item
+						img(src='images/index-pic4.jpg' alt='photo').j-category-img
+						a(href='#').category__link.category__link4
+							.icon-wrapper
+								img(src='images/23.png' alt='icon')
+								img(src='images/23-colored.png' alt='icon')
+							.category-text-wrapper.j-category-text
+								.category__title Wireless Metering
+								.category__text Unlike home energy monitors, smart meters can gather data for remote reporting. Such an advanced metering infrastructure (AMI) differs from traditional automatic meter reading (AMR) in that it enables two-way communications with the meter.
+
+			.products__bottom.home__bottom
+				.products__bottom-text Your Eaton sales representative can help you fully understand the options, benefits, and solutions that Eaton meters can provide. 
+				.products__bottom_additional Questions regarding product selection and technical support should be directed 
+				.products__bottom-tel 1-800-809-2772
+				a(href='mailto:pqsupport@eaton.com').products__bottom-email pqsupport@eaton.com
+
+
+		aside.aside.aside__products.aside_home.aside__scroll
 			.header-sales-office
 				a(href='contact.html')
 					span Contact us
 						+icon("envelope",30,27)
-			a(href='states.html').aside-map
-				.aside-map__wrapper
-					img(src='images/usa-map.svg' id="svgmap" width="100%" height="auto")
-				.aside-map__text This tool will allow you to see whitch Eaton utility Metering products are applicable to your geographic region, and your utility.
-				.aside-map__pick
-						.wrap
-							span or
-							| Start by picking the state you are in
+			.catalogue__mobile-view.home__filters
+				span Select application
+					+icon("arrow6",15,20)
+				.app-links-block
+					a(href='javascript:;') Power energy metering
+						span 12
+					a(href='javascript:;') Power quality
+						span 3
+					a(href='javascript:;') Sub-metering
+						span 6
+					a(href='javascript:;') Wireless metering
+						span 2
+				span.font__modify Power distribution & control assemblies
+				ul.catalogue__mobile-list
+					li
+						a(href='menu-products.html') Distribution Boards & Consumer Units
+					li
+						a(href='menu-products.html') IEC Low Voltage Switchboard Systems
+					li
+						a(href='menu-products.html') ANSI Low Voltage Control Assemblies
+					li
+						a(href='menu-products.html') Halyester Polyester Enclosures
+					li
+						a(href='menu-products.html') Electrical Houses (E-House)
+					li
+						a(href='menu-products.html') IEC Medium Voltage Switchgear
+					li
+						a(href='menu-products.html') ANSI Medium Voltage Switchgear
+					li
+						a(href='menu-products.html') Medium Voltage Circuit Breakers & Contactors
+					li
+						a(href='menu-products.html') Medium Voltage Drives SC9000
+					li
+						a(href='menu-products.html') Protective Relays
+					li
+						a(href='menu-products.html') Predictive Diagnostics
+					li
+						a(href='menu-products.html') Busway

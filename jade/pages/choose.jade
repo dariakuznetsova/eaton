@@ -4,19 +4,19 @@ block title
 	title Каталог
 
 block header
-	include ../blocks/_header
+	include ../blocks/_header__choose
 
 block content
 	main.main
 		.main-content.main-content__manufacturer.choose-cnt
-			ul.main-menu
+			ul.main-menu.main-menu__choose
 				li
 					a(href='#').help-section__link.app-link Application
 						img(src='images/app.svg' alt='icon')
 				li
-					a(href='catalogue.html') Products
+					a(href='menu-products.html') Products
 				li
-					a(href='#') Manufacturer
+					a(href='manufacturer.html') Manufacturer
 				li
 					a(href='features2.html') Legacy
 				li.active
@@ -41,19 +41,21 @@ block content
 					span Meters to compare
 
 				form.meter-choose-form.j-meter-choose-form
-					.column
-						- var label = ['IQ 35M','IQ 130','IQ 140','IQ 150','IQ 150S','IQ 230','IQ 250S','IQ 260','IQ DP - 4000','IQ DP - 4100','IQA - 6400','IQA - 6600','PXMP','PXM 2250','PXM 2260','PXM 2270','PXM 2280','PXM 2290','Power Xpert Meter 4000','Power Xpert Meter 6000','Power Xpert Meter 8000']
-						each label_item in label
+						- var label = {'IQ 35M':'images/article1.png','IQ 130':'images/holder1.png','IQ 140':'images/holder2.png','IQ 150':'images/holder3.png','IQ 150S':'images/holder3.png','IQ 230':'images/article1.png','IQ 250S':'images/holder3.png','IQ 260':'images/holder2.png','IQ DP - 4000':'images/holder1.png','IQ DP - 4100':'images/holder2.png','IQA - 6400':'images/article1.png','IQA - 6600':'images/holder1.png','PXMP':'images/holder3.png','PXM 2250':'images/holder3.png','PXM 2260':'images/holder2.png','PXM 2270':'images/holder1.png','PXM 2280':'images/holder3.png','PXM 2290':'images/article1.png','Power Xpert Meter 4000':'images/holder1.png','Power Xpert Meter 6000':'images/holder2.png','Power Xpert Meter 8000':'images/holder3.png'}
+						each val, key in label
 							fieldset
 								label
 									input(type='checkbox').checked__elem.j-checkbox-input
 									.checkbox-fake.j-fakebox
 										+icon("checked",14,11)
-									span= label_item
+									.img
+										img(src='#{val}')
+									span= key
+								a(href='#')
+									+icon("info1",22,22)
 
 					.buttons-block
 						a(href='compare.html').results-button View results
-						//- button(type='submit').results-button View results
 						button(type='reset').reset-button Clear
 
 

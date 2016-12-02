@@ -4,43 +4,24 @@ block title
 	title Каталог
 
 block header
-	include ../blocks/_header
+	include ../blocks/_header__compare
 
 block content
-	main.main.compare
-		ul.main-menu.main-menu_compare
+	main.main.compare#top
+		ul.main-menu.main-menu_compare.main-menu_compare2
 				li
 					a(href='#').help-section__link.app-link Application
 							img(src='images/app.svg' alt='icon')
 				li
-					a(href='catalogue.html') Products
+					a(href='menu-products.html') Products
 				li
-					a(href='#') Manufacturer
+					a(href='manufacturer.html') Manufacturer
 				li
 					a(href='features2.html') Legacy
 				li.active
 					a(href='choose.html').compare__link Compare
 						p 3
 						+icon("graphic",25,23)
-
-
-			//- li
-			//- 	a(href='#').help-section__link Help Section
-			//- 		+icon("info1",28,28)
-			//- li.contacts-us-link
-			//- 	a(href='contact.html') Contucts us
-			//- li
-			//- 	a(href='catalogue.html') Catalogue
-			//- li
-			//- 	a(href='#') Application
-			//- li
-			//- 	a(href='features2.html') Features
-			//- li
-			//- 	a(href='manufacturer.html') Manufacturer
-			//- li.active
-			//- 	a(href='choose.html').compare__link Compare
-			//- 		p 3
-			//- 		+icon("graphic",25,23)
 
 		ul.compare__view-menu
 			li
@@ -49,8 +30,9 @@ block content
 				a(href='javascript:;').j-detailed-link Detailed View
 
 		.compare-wrapper
-			.compare-inner-wrapper
-				.main-content
+			.compare-inner-wrapper.compare-inner-wrapper2
+				
+				.main-content.main-content__compare
 					.compare-table.j-compare-table
 
 						.detailed-table-wrapper.j-main-table
@@ -83,7 +65,7 @@ block content
 											a(href='how-to-buy.html').how-to-buy__link How to buy
 								tr.advantages-tr.j-advantages
 									td.td-aside.td-aside_bg
-										span Advantages
+										span Differentiators
 									td.td-cnt
 										ul.specifications-list.advantages
 											- var text = ['Current & Voltage - 3 Phase Average', 'Watts','Wh --Net (yes (option))','Wh --Positive & Negative (yes (option))','Watt Demand', 'Va', 'Vah', 'Va Demand', 'Vars', 'Varh', 'Var Demand', 'Demand Metering', '4 Quadrant Energy (yes (option))', 'Frequency', 'Apparent Power Factor', 'Per Phase Power Factor', 'Memory (standard/optional) (0kb/115kb)', 'Data Logging (yes(option))', 'Time/Date Stamp (yes(option))', 'LED alarm indicator','Programmable Discrete Inputs (yes(w/BACnet))','Prog. Pulse Output --Wh, Varh, Vah (yes (option))']
@@ -108,7 +90,7 @@ block content
 
 								tr.disadvantages-tr.j-disadvantages
 									td.td-aside.td-aside_bg.td-aside-disadvantages
-										span Disadvantages
+										span Standard features
 									td.td-cnt
 										ul.specifications-list.disadvantages
 											- var text = ['Current & Voltage - 3 Phase Min, Max','Neutral Current','Min/Max Log','10/100 RJ-45 Ethernet Port','Modbus TCP','+/- % Accuracy --Current (0.4 Reading)','+/- % Accuracy --Voltage (0.4 Reading)','Meets IEC % Revenue Accuracy (62053(0.5))']
@@ -134,7 +116,7 @@ block content
 							table.meter-table.table-detailed
 								tr.lower-block
 									td.td-aside.arrow-block
-										a(href='#header').j-up-link
+										a(href='#top').j-up-link
 											+icon("arrow2",60,70)
 									td.start-over-block
 										a(href='#').start-over-visible Start over
@@ -702,7 +684,7 @@ block content
 									td
 
 
-				aside.aside.aside-compare
+				aside.aside.aside-compare.aside-compare2
 					.add-meter-to-compare
 						+icon("cross",35,35)
 						p add one more meter to compare

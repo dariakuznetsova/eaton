@@ -1,0 +1,690 @@
+extends ../main.jade
+
+block title
+	title Каталог
+
+block header
+	include ../blocks/_header__compare
+
+block content
+	main.main.compare#top
+		ul.main-menu.main-menu_compare.main-menu_compare2
+				li
+					a(href='#').help-section__link.app-link Application
+							img(src='images/app.svg' alt='icon')
+				li
+					a(href='menu-products.html') Products
+				li
+					a(href='manufacturer.html') Manufacturer
+				li
+					a(href='features2.html') Legacy
+				li.active
+					a(href='choose.html').compare__link Compare
+						p 3
+						+icon("graphic",25,23)
+
+		ul.compare__view-menu
+			li
+				a(href='javascript:;').j-summary-link Summary View
+			li.active
+				a(href='javascript:;').j-detailed-link Detailed View
+
+		.compare-wrapper
+			.compare-inner-wrapper.compare-inner-wrapper2
+				.main-content.main-content__compare
+					.compare-table.j-compare-table
+
+						.detailed-table-wrapper.j-main-table
+							table.meter-table.table-detailed.j-table-detail
+								tr.first-tr.j-first-tr
+									td.td-aside
+									td.td-cnt
+										.img
+											img(src='images/article1.png' alt='фото товара')
+										.item__title Eaton IQ35M
+										.buy-block
+											a(href='#').delete-item-link.j-delete-link
+												+icon("cancel",15,15)
+											a(href='how-to-buy.html').how-to-buy__link How to buy
+									td.td-cnt
+										.img
+											img(src='images/article2.png' alt='фото товара')
+										.item__title Eaton IQ130
+										.buy-block
+											a(href='#').delete-item-link.j-delete-link
+												+icon("cancel",15,15)
+											a(href='how-to-buy.html').how-to-buy__link How to buy
+									td.td-cnt
+										.img
+											img(src='images/article2.png' alt='фото товара')
+										.item__title Eaton IQ140
+										.buy-block
+											a(href='#').delete-item-link.j-delete-link
+												+icon("cancel",15,15)
+											a(href='how-to-buy.html').how-to-buy__link How to buy
+								tr.advantages-tr.j-advantages
+									td.td-aside.td-aside_bg
+										span Differentiators
+									td.td-cnt
+										ul.specifications-list.advantages
+											- var text = ['Current & Voltage - 3 Phase Average', 'Watts','Wh --Net (yes (option))','Wh --Positive & Negative (yes (option))','Watt Demand', 'Va', 'Vah', 'Va Demand', 'Vars', 'Varh', 'Var Demand', 'Demand Metering', '4 Quadrant Energy (yes (option))', 'Frequency', 'Apparent Power Factor', 'Per Phase Power Factor', 'Memory (standard/optional) (0kb/115kb)', 'Data Logging (yes(option))', 'Time/Date Stamp (yes(option))', 'LED alarm indicator','Programmable Discrete Inputs (yes(w/BACnet))','Prog. Pulse Output --Wh, Varh, Vah (yes (option))']
+											each text_item in text
+												li
+													+icon("check",16,16)
+													p= text_item
+									td.td-cnt
+										ul.specifications-list.advantages
+											- var text = ['Current & Voltage - 3 Phase Min, Max', 'Neutral Current (yes(calculated))', 'Min/Max Log', '10/100 RJ-45 Ethernet Port (yes (option))', 'Modbus TCP (yes (option))', '+/- % Accuracy --Current (0.25 Reading)', '+/- % Accuracy --Voltage (0.25 Reading)', 'Meets IEC % Revenue Accuracy (687(0.5))']
+											each text_item in text
+												li
+													+icon("check",16,16)
+													p= text_item
+									td.td-cnt
+										ul.specifications-list.advantages
+											- var text = ['Current & Voltage - 3 Phase Min, Max','Neutral Current (yes(calculated))','Min/Max Log','10/100 RJ-45 Ethernet Port (yes (option))','Modbus TCP (yes (option))','Modbus TCP (yes (option))','+/- % Accuracy --Voltage (0.25 Reading)','Meets IEC % Revenue Accuracy (687(0.5))']
+											each text_item in text
+												li
+													+icon("check",16,16)
+													p= text_item
+
+								tr.disadvantages-tr.j-disadvantages
+									td.td-aside.td-aside_bg.td-aside-disadvantages
+										span Standard features
+									td.td-cnt
+										ul.specifications-list.disadvantages
+											- var text = ['Current & Voltage - 3 Phase Min, Max','Neutral Current','Min/Max Log','10/100 RJ-45 Ethernet Port','Modbus TCP','+/- % Accuracy --Current (0.4 Reading)','+/- % Accuracy --Voltage (0.4 Reading)','Meets IEC % Revenue Accuracy (62053(0.5))']
+											each text_item in text
+												li
+													+icon("check",16,16)
+													p= text_item
+									td.td-cnt
+										ul.specifications-list.disadvantages
+											- var text = ['Current & Voltage - 3 Phase Average','Watts','Wh --Net','Wh --Positive & Negative','Watt Demand','Va','Vah','Va Demand','Vars','Varh','Var Demand','Demand Metering','4 Quadrant Energy','Frequency','Apparent Power Factor','Per Phase Power Factor','Memory (standard/optional)','Data Logging','Time/Date Stamp','LED alarm indicator','Programmable Discrete Inputs','Prog. Pulse Output --Wh, Varh, Vah','KYZ Output','BACnet MS/TP','Operating Temp. Range --Degrees C (-20 to 70)']
+											each text_item in text
+												li
+													+icon("check",16,16)
+													p= text_item
+									td.td-cnt
+										ul.specifications-list.disadvantages
+											- var text = ['Current & Voltage - 3 Phase Average','Wh --Net','Wh --Positive & Negative','Vah','Varh','4 Quadrant Energy','Per Phase Power Factor','Memory (standard/optional)','Data Logging','Time/Date Stamp','LED alarm indicator','Programmable Discrete Inputs ','Prog. Pulse Output --Wh, Varh, Vah','KYZ Output','BACnet MS/TP','Operating Temp. Range --Degrees C (-20 to 70)']
+											each text_item in text
+												li
+													+icon("check",16,16)
+													p= text_item
+
+							table.meter-table.table-detailed
+								tr.lower-block
+									td.td-aside.arrow-block
+										a(href='#top').j-up-link
+											+icon("arrow2",60,70)
+									td.start-over-block
+										a(href='#').start-over-visible Start over
+									td.start-over-block
+										a(href='#').start-over-duplicate Start over
+									td
+
+						.summary-table-wrapper.j-main-table
+							table.meter-table.table-summary.j-summary-table
+								tr.first-tr.j-first-tr
+									td
+										span.title Instrumentation
+									td.td-cnt
+										.img
+											img(src='images/article1.png' alt='фото товара')
+										.item__title Eaton IQ35M
+										.buy-block
+											a(href='javascript:;').delete-item-link.j-delete-link
+												+icon("cancel",15,15)
+											a(href='how-to-buy.html').how-to-buy__link How to buy
+									td.td-cnt
+										.img
+											img(src='images/article2.png' alt='фото товара')
+										.item__title Eaton IQ130
+										.buy-block
+											a(href='javascript:;').delete-item-link.j-delete-link
+												+icon("cancel",15,15)
+											a(href='how-to-buy.html').how-to-buy__link How to buy
+									td.td-cnt
+										.img
+											img(src='images/article2.png' alt='фото товара')
+										.item__title Eaton IQ140
+										.buy-block
+											a(href='javascript:;').delete-item-link.j-delete-link
+												+icon("cancel",15,15)
+											a(href='how-to-buy.html').how-to-buy__link How to buy
+								tr
+									td Current & Voltage - Per Phase
+									td.green-td
+									td.blue-td
+									td.blue-td
+								tr
+									td Current & Voltage - 3 Phase Average
+									td.green-td
+									td
+									td
+								tr
+									td Current & Voltage - 3 Phase Min, Max
+									td
+									td.blue-td
+									td.blue-td
+								tr
+									td Current & Voltage - % Phase Unbalance
+									td
+									td
+									td
+								tr
+									td Ground Current
+									td
+									td
+									td
+								tr
+									td Neutral Current
+									td
+									td yes
+										span (Calculated)
+									td yes
+										span (Calculated)
+								tr
+									td Voltage Neutral-Ground
+									td
+									td
+									td
+								tr
+									td View Current & Voltage Phasors On Display
+									td
+									td
+									td
+								tr
+									td Current Demand
+									td.green-td
+									td.blue-td
+									td.blue-td
+								tr
+									td Watts
+									td.green-td
+									td
+									td.blue-td
+								tr
+									td Wh --Net
+									td.green yes
+										span (option)
+									td
+									td
+								tr
+									td Wh --Positive & Negative
+									td.green yes
+										span (option)
+									td
+									td
+								tr
+									td Watt Demand
+									td.green-td
+									td
+									td.blue-td
+								tr
+									td Va
+									td.green-td
+									td
+									td.blue-td
+								tr
+									td Vah
+									td.green-td
+									td
+									td
+								tr
+									td Va Demand
+									td.green-td
+									td
+									td.blue-td
+								tr
+									td Vars
+									td.green-td
+									td
+									td.blue-td
+								tr
+									td Varh
+									td.green-td
+									td
+									td
+								tr
+									td Var Demand
+									td.green-td
+									td
+									td.blue-td
+								tr
+									td Time Of Use Energy
+									td
+									td
+									td
+								tr
+									td Demand Metering
+									td.green-td
+									td
+									td.blue-td
+								tr
+									td 4 Quadrant Energy
+									td.green yes
+										span (option)
+									td
+									td
+								tr
+									td Frequency
+									td.green-td
+									td
+									td.blue-td
+								tr
+									td Apparent Power Factor
+									td.green-td
+									td
+									td.blue-td
+								tr
+									td Displacement Power Factor
+									td
+									td
+									td
+								tr
+									td Per Phase Power Factor
+									td.green-td
+									td
+									td
+
+							table.meter-table.table-summary.j-table.j-summary-table
+								tr.first-tr
+									td
+										span.title Power Quality analysis
+									td
+									td
+									td
+								tr
+									td %Thd - Current & Voltage
+									td
+									td
+									td
+								tr
+									td Individual Harmonics Magnitude
+									td
+									td
+									td
+								tr
+									td View Harmonic Spectrum At Device
+									td
+									td
+									td
+								tr
+									td K-Factor
+									td
+									td
+									td
+								tr
+									td Crest Factor
+									td
+									td
+									td
+								tr
+									td ITIC Performance Curve
+									td
+									td
+									td
+								tr
+									td Flicker
+									td
+									td
+									td
+								tr
+									td PQ Index Graph
+									td
+									td
+									td
+								tr
+									td Number Of 9'S Availability
+									td
+									td
+									td
+
+							table.meter-table.table-summary.j-table.j-summary-table
+								tr.first-tr
+									td
+										span.title Waveform analysis
+									td
+									td
+									td
+								tr
+									td Waveform Capture On Threshold/Input
+									td 
+									td 
+									td
+								tr
+									td Voltage Disturbance Wave Capture Trigger
+									td
+									td
+									td
+								tr
+									td Excess Dv/Dt Or Interruption Capture Trigger
+									td
+									td
+									td
+								tr
+									td Stores waveform captures
+									td
+									td
+									td
+								tr
+									td Sampling rate
+									td
+									td
+									td
+								tr
+									td Waveform recording duration
+									td
+									td
+									td
+								tr
+									td Impulsive Transient Capture
+									td
+									td
+									td
+								tr
+									td Transient Capture On Neutral
+									td
+									td
+									td
+								tr
+									td Captured Waveforms Displayed on Meter/GUI
+									td
+									td
+									td
+								tr
+									td COMTRADE -  standard IEEE file format
+									td
+									td
+									td
+
+							table.meter-table.table-summary.j-table.j-summary-table
+								tr.first-tr
+									td
+										span.title Logging & alarms
+									td
+									td
+									td
+								tr
+									td Memory (standard/optional)
+									td.green 0kb / 115kb
+									td
+									td
+								tr
+									td Min/Max Log
+									td
+									td
+									td
+								tr
+									td Event Log
+									td
+									td
+									td
+								tr
+									td Data Logging
+									td
+									td
+									td
+								tr
+									td Time/Date 
+									td
+									td
+									td
+								tr
+									td Audible Alarm
+									td
+									td
+									td
+								tr
+									td LED alarm indicator
+									td
+									td
+									td
+								tr
+									td Email on Alarm
+									td
+									td
+									td
+
+							table.meter-table.table-summary.j-table.j-summary-table
+								tr.first-tr
+									td
+										span.title Time synchronization
+									td
+									td
+									td
+								tr
+									td GPS Clock Synchronization Capability via DFC-77
+									td
+									td
+									td
+								tr
+									td Clock Synchronization via Ethernet network via NTP
+									td
+									td
+									td
+								tr
+									td 1 millisecond timestamp resolution
+									td
+									td
+									td
+
+							table.meter-table.table-summary.j-table.j-summary-table
+								tr.first-tr
+									td
+										span.title I/O Capability
+									td
+									td
+									td
+								tr
+									td Programmable Discrete Inputs 
+									td.green yes
+										span (w/BACnet)
+									td
+									td
+								tr
+									td Synchronize Demand Window Pulse Input
+									td
+									td
+									td
+								tr
+									td Programmable Relay Outputs
+									td
+									td
+									td
+								tr
+									td Voltage Disturbance Trip
+									td
+									td
+									td
+								tr
+									td Load Shedding
+									td
+									td
+									td
+								tr
+									td Prog. Pulse Output --Wh, Varh, Vah
+									td.green yes
+										span (option)
+									td
+									td
+								tr
+									td KYZ Output
+									td.green yes
+										span (option)
+									td
+									td
+								tr
+									td Analog Input
+									td
+									td
+									td
+								tr
+									td Analog Output
+									td
+									td
+									td
+
+							table.meter-table.table-summary.j-table.j-summary-table
+								tr.first-tr
+									td
+										span.title Communications
+									td
+									td
+									td
+								tr
+									td Native Communications ports
+									td
+									td
+									td
+								tr
+									td Fiber-optic Ethernet Port
+									td
+									td
+									td
+								tr
+									td 802.11 Wireless Ethernet
+									td
+									td yes
+										span (option)
+									td yes
+										span (option)
+								tr
+									td INCOM
+									td
+									td
+									td
+								tr
+									td Modbus RTU (RS-485)
+									td.green yes
+										span (option)
+									td yes
+										span (option)
+									td yes
+										span (option)
+								tr
+									td BACnet MS/TP
+									td
+									td yes
+										span (option)
+									td yes
+										span (option)
+								tr
+									td BACnet/IP
+									td.green yes
+										span (option)
+									td
+									td
+								tr
+									td Internet/HTTP Server built-in
+									td
+									td
+									td
+								tr
+									td Network Time Protocol (NTP)
+									td
+									td
+									td
+								tr
+									td Simple Network Management Protocol (SNMP)
+									td
+									td
+									td
+								tr
+									td File Transfer Protocol (FTP) built-in
+									td
+									td
+									td
+								tr
+									td Email (SMTP)
+									td
+									td
+									td
+								tr
+									td Graphic Display w/ Built-In 10/100 RJ-45 Local Ethernet Port
+									td.green-td
+									td.blue-td
+									td.blue-td
+
+							table.meter-table.table-summary.j-table.j-summary-table
+								tr.first-tr
+									td 
+										span.title Operational specifications
+									td
+									td
+									td
+								tr
+									td +/- % Accuracy --Current
+									td.green 0.4
+										span Reading
+									td 0.25
+										span Reading
+									td 0.25
+										span Reading
+								tr
+									td +/- % Accuracy --Voltage
+									td.green 0.4
+										span Reading
+									td 0.25
+										span Reading
+									td 0.25
+										span Reading
+								tr
+									td Revenue Approved --Industry Canada
+									td
+									td
+									td
+								tr
+									td Meets Ansi % Revenue Accuracy
+									td C12.20 (0.5)
+									td C12.20 (0.5)
+									td C12.20 (0.5)
+								tr
+									td Meets IEC % Revenue Accuracy
+									td.green 62053 (0.5)
+									td 687 (0.5)
+									td 687 (0.5)
+								tr
+									td Operating Temp. Range --Degrees C
+									td -30 to 70
+									td -20 to 70
+									td -20 to 70
+								tr
+									td Number of Current Inputs
+									td.green 3
+									td 3
+									td 3
+								tr
+									td No PTs Below 600 Vac
+									td.green-td
+									td.blue-td
+									td.blue-td
+								tr
+									td No PTs For Floating 3 Wire (Delta) < 600 Vac
+									td.green-td
+									td.blue-td
+									td.blue-td
+								tr
+									td Separate Ground &  Neutral Current Inputs
+									td
+									td
+									td
+
+							table.meter-table.table-summary
+								tr.lower-block
+									td.td-aside.arrow-block
+										a(href='#header').j-up-link
+											+icon("arrow2",60,70)
+									td.start-over-block
+										a(href='#').start-over-visible Start over
+									td.start-over-block
+										a(href='#').start-over-duplicate Start over
+									td
+
+
+				aside.aside.aside-compare.aside-compare2
+					.add-meter-to-compare
+						+icon("cross",35,35)
+						p add one more meter to compare
+
